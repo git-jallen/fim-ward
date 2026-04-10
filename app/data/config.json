@@ -1,0 +1,11 @@
+{
+  "scan_interval_seconds": 3,
+  "hash_algorithm": "sha256",
+  "monitored_directories": [],
+  "ignore_patterns": [],
+  "enable_realtime_monitoring": true,
+  "alert_settings": {
+    "log_to_file": true,
+    "console_output": true
+  }
+}

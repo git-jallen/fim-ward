@@ -1,0 +1,15 @@
+.venv
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+.env
+
+data/logs/
+data/baseline.json
+
+dist/
+build/
+*.spec

@@ -1,51 +1,153 @@
-/* GLOBAL */
+/* =========================
+   GLOBAL
+========================= */
 QWidget {
-    background-color: #121212;
-    color: #E0E0E0;
-    font-family: Segoe UI, Arial;
+    background-color: #0f1115;
+    color: #e8ecf1;
+    font-family: "Segoe UI", Arial, sans-serif;
     font-size: 14px;
 }
 
-/* TITLE */
+/* =========================
+   MAIN WINDOW SECTIONS
+========================= */
 #title {
-    font-size: 22px;
-    font-weight: bold;
-    padding: 10px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #7CFFB2;
+    padding: 12px 0 4px 0;
 }
 
-/* DIRECTORY LABEL */
+#subtitle {
+    font-size: 13px;
+    color: #9aa4b2;
+    padding-bottom: 12px;
+}
+
+#sectionCard {
+    background-color: #161a22;
+    border: 1px solid #252b36;
+    border-radius: 14px;
+    padding: 14px;
+}
+
 #dirLabel {
-    background-color: #1A1A1A;
-    padding: 6px;
-    border: 1px solid #333;
+    background-color: #0c0f14;
+    border: 1px solid #2c3442;
+    border-radius: 10px;
+    padding: 10px 12px;
+    color: #d9e2ec;
 }
 
-/* BUTTONS */
+/* =========================
+   BUTTONS
+========================= */
 QPushButton {
-    background-color: #1F1F1F;
-    border: 1px solid #333;
-    padding: 8px;
-    border-radius: 6px;
+    background-color: #1b2230;
+    color: #e8ecf1;
+    border: 1px solid #2d3748;
+    border-radius: 10px;
+    padding: 10px 16px;
+    font-weight: 600;
 }
 
 QPushButton:hover {
-    background-color: #333;
+    background-color: #232c3d;
+    border: 1px solid #3a465c;
 }
 
 QPushButton:pressed {
-    background-color: #444;
+    background-color: #141a24;
 }
 
-/* LOG PANEL */
+#browseButton {
+    background-color: #173126;
+    border: 1px solid #2f6f56;
+    color: #7CFFB2;
+}
+
+#browseButton:hover {
+    background-color: #1d3b2e;
+}
+
+#createBaselineButton {
+    background-color: #2f2614;
+    border: 1px solid #8a6b2f;
+    color: #ffbf66;
+}
+
+#createBaselineButton:hover {
+    background-color: #3b3018;
+}
+
+#startButton {
+    background-color: #173126;
+    border: 1px solid #2f6f56;
+    color: #7CFFB2;
+}
+
+#startButton:hover {
+    background-color: #1d3b2e;
+}
+
+#stopButton {
+    background-color: #3a1f24;
+    border: 1px solid #7a3945;
+    color: #ff8f9b;
+}
+
+#stopButton:hover {
+    background-color: #47242a;
+}
+
+/* =========================
+   LOG PANEL
+========================= */
 #logPanel {
-    background-color: #0D0D0D;
-    border: 1px solid #333;
-    padding: 5px;
+    background-color: #0c0f14;
+    border: 1px solid #2c3442;
+    border-radius: 12px;
+    padding: 10px;
+    font-family: "Consolas", "Courier New", monospace;
+    font-size: 13px;
 }
 
-/* STATUS */
+/* =========================
+   STATUS
+========================= */
+#statusContainer {
+    background-color: #161a22;
+    border: 1px solid #252b36;
+    border-radius: 12px;
+    padding: 8px 12px;
+}
+
 #statusLabel {
+    color: #a9b4c2;
+    font-weight: 600;
+    padding: 4px 0;
+}
+
+/* =========================
+   FILE DIALOG / GENERIC INPUTS
+========================= */
+QFileDialog, QDialog {
+    background-color: #0f1115;
+    color: #e8ecf1;
+}
+
+QLineEdit, QListView, QTreeView {
+    background-color: #0c0f14;
+    color: #e8ecf1;
+    border: 1px solid #2c3442;
+    border-radius: 8px;
     padding: 6px;
-    border-top: 1px solid #333;
-    color: #AAAAAA;
+}
+
+QComboBox {
+    background-color: #0c0f14;
+    color: #e8ecf1;
+    border: 1px solid #2c3442;
+    border-radius: 8px;
+    padding: 6px;
 }

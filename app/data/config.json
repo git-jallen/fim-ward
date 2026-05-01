@@ -1,4 +1,6 @@
 {
+  "_comment": "Configuration file for the Ward FIM system. Controls scan intervals, hashing, logging, and monitoring behavior.",
+  
   "scan_interval_seconds": 3,
   "hash_algorithm": "sha256",
   "monitored_directories": [],

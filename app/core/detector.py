@@ -21,27 +21,21 @@ class ChangeDetector:
         old_files = set(self.previous_state.keys())
         new_files = set(current_state.keys())
 
-        # -------------------------
         # Detect deleted files
-        # -------------------------
         for path in old_files - new_files:
             events.append({
                 "type": "DELETED",
                 "file": path
             })
 
-        # -------------------------
         # Detect new files
-        # -------------------------
         for path in new_files - old_files:
             events.append({
                 "type": "NEW",
                 "file": path
             })
 
-        # -------------------------
         # Detect modified files
-        # -------------------------
         for path in old_files & new_files:
             if self.previous_state[path] != current_state[path]:
                 events.append({

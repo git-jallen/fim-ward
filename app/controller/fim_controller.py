@@ -5,7 +5,12 @@ from ..core.detector import ChangeDetector
 from ..services.baseline import create_baseline, save_baseline
 from ..services.logging import log_event
 
+"""
+This file acts as the central controller for the Ward File Integrity Monitoring system.
 
+This file serves as the bridge between:
+GUI Layer  <->  Core Monitoring Logic  <->  Service Layer
+"""
 class MonitorWorker(QThread):
     event_signal = Signal(dict)
 

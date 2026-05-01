@@ -11,8 +11,8 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
 
-        self.setWindowTitle("FIM Sentinel")
-        self.setMinimumSize(1000, 650)
+        self.setWindowTitle("Ward")
+        self.setMinimumSize(750, 550)
 
         self.controller = None
         self.directory = None
@@ -26,7 +26,7 @@ class MainWindow(QMainWindow):
         central.setLayout(main_layout)
 
         # Header
-        self.title = QLabel("FIM Ward")
+        self.title = QLabel("Ward")
         self.title.setObjectName("title")
         self.title.setAlignment(Qt.AlignCenter)
 
@@ -45,7 +45,7 @@ class MainWindow(QMainWindow):
         dir_card.setLayout(dir_layout_outer)
 
         dir_heading = QLabel("Monitored Directory")
-        dir_heading.setStyleSheet("font-size: 16px; font-weight: 600; color: #ffbf66;")
+        dir_heading.setStyleSheet("font-size: 16px; font-weight: 600; color: #7CFFB2;")
         dir_layout_outer.addWidget(dir_heading)
 
         dir_row = QHBoxLayout()
@@ -121,9 +121,6 @@ class MainWindow(QMainWindow):
         dialog = QFileDialog(self, "Select Directory")
         dialog.setFileMode(QFileDialog.Directory)
         dialog.setOption(QFileDialog.ShowDirsOnly, True)
-
-        # Important: use Qt dialog instead of native OS file picker
-        # so your stylesheet has a better chance of applying
         dialog.setOption(QFileDialog.DontUseNativeDialog, True)
 
         if dialog.exec():
@@ -143,3 +140,6 @@ class MainWindow(QMainWindow):
 
     def set_status(self, text):
         self.status.set_status(text)
+
+    def set_files_monitored(self, count):
+        self.log_panel.add_log(f"[INFO] Files in baseline: {count}")

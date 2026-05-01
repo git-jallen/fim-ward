@@ -1,3 +1,4 @@
 {
+    "_comment": "Stores the trusted baseline of file hashes. Each entry maps a file path to its hash."
     
 }
